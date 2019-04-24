@@ -25,7 +25,10 @@ public class MainMenu extends BasicGameState{
 
 	@Override
 	public void render(GameContainer arg0, StateBasedGame arg1, Graphics arg2) throws SlickException {
-		arg2.setColor(Color.cyan);
+		double rand = Math.random() * (16777215);
+		System.out.println(rand);
+		String hexRand = Integer.toHexString((int)rand);
+		arg2.setColor(Color.decode("#"+hexRand));
 		arg2.fillRect(0, 0, 800, 600);
 		arg2.setColor(Color.white);
 		arg2.drawString("Main menu", 50, 50);
